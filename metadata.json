@@ -1,0 +1,8 @@
+{
+  "name": "gemstoneOS 98 Jan Mayen",
+  "description": "Retro Windows 98-style remix of gemstoneOS 98 Jan Mayen operating system simulator. Features an interactive desktop, Start bar, Gemmy AI Assistant, GemPaint, GemSweeper, Mineral Clicker, GemTune, and custom settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
