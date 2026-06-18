@@ -1075,6 +1075,7 @@ export default function App() {
                 playBiosClick();
                 setStartMenuOpen((prev) => !prev);
               }}
+              title="Launch Start Menu Applications and system controls"
               className={`retro-button flex items-center gap-1.5 h-[28px] !px-2.5 font-bold tracking-wide uppercase ${
                 startMenuOpen ? "bg-[#e2e2e2] border-t-[#808080] border-l-[#808080] border-r-white border-b-white" : ""
               }`}
@@ -1237,6 +1238,8 @@ export default function App() {
             return (
               <button
                 key={win.id}
+                id={`taskbar-item-${win.id}`}
+                title={win.title}
                 onClick={() => {
                   if (isActive) {
                     minimizeWindow(win.id);
@@ -1266,7 +1269,7 @@ export default function App() {
             {settings.soundEnabled ? <Volume2 size={13} className="text-emerald-800" /> : <VolumeX size={13} className="text-red-700" />}
           </button>
 
-          <div className="flex items-center gap-1 text-[11px] font-bold text-gray-800">
+          <div className="flex items-center gap-1 text-[11px] font-bold text-gray-800" title="Current System Time">
             <Clock size={11.5} className="text-indigo-850 shrink-0" />
             <span>{currentTime || "09:00:00"}</span>
           </div>
